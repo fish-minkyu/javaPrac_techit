@@ -1,6 +1,6 @@
-package d1VarAndTypes;
+package D1VarAndTypes;
 
-public class Q3 {
+public class Q3VarAndTypes {
   public static void main(String[] args) {
 
     // Q3.

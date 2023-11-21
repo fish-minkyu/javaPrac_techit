@@ -1,3 +1,5 @@
+package D1VarAndTypes;
+
 import java.util.Scanner;
 
 // 변수와 자료형

@@ -1,8 +1,8 @@
-package d1VarAndTypes;
+package D1VarAndTypes;
 
 import java.util.Scanner;
 
-public class Q5 {
+public class Q5VarAndTypes {
   public static void main(String[] args) {
     // Q5.
     /*
