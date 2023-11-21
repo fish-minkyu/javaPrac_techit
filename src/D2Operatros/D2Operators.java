@@ -10,20 +10,20 @@ public class D2Operators {
     float divide = 20 / 10; // int로 선언을 하면 실수가 나올 수 있으므로 double로 해줘야 한다.
     int modulo = 15 % 10;
 
-    System.out.println(plus);
-    System.out.println(minus);
-    System.out.println(multiply);
-    System.out.println(divide);
-    System.out.println(modulo);
+    System.out.println(plus); // 30
+    System.out.println(minus); // 10
+    System.out.println(multiply); // 200
+    System.out.println(divide); // 2.0
+    System.out.println(modulo); // 5
 
     // %의 우선순위는?
     int result = (10 + 5 % 3) / 3 + 2 * 3;
-    System.out.println(result);
+    System.out.println(result); // 10
 
     System.out.println(21 / 10); // 2
     // 시도 1. 데이터를 받는 애를 int가 아니라 double로 해보자
     double doubleValue = 21 / 10; // 결과를 정수로 계산을 마무리하고 표현을 실수로 한 것
-    System.out.println(doubleValue); // 2.0으로 계산된 값을 출력
+    System.out.println(doubleValue); // 2.0 <- 2로 계산이 되고 실수로 형변환이 된 것
 
     // 시도 2. 나누기 전에 실수로 만들어 주자
     // 피연산자 중 하나라도 double이면 결과도 double이다.
@@ -36,7 +36,7 @@ public class D2Operators {
     int intResult = (int) 2.1; // ()에다가 어떤 자료형으로 바꿔줄지 써주면 됨
     System.out.println(intResult); // 2, 소수점 이하는 버려진다.
 
-    // 선 변환을 통한 나누기 연산
+    // 형변환을 통한 나누기 연산
     int left = 21;
     int right = 10;
     double casteResult = (double) left / right; // left는 int에서 double로 바뀌었으므로 계산 결과는 double로 바뀔 것이다.
@@ -55,6 +55,7 @@ public class D2Operators {
     // String 덧샘 (String Concatenation)
     // : 포맷팅보다 느리다.
     System.out.println("여기에 10을 입력하시오: " + 10); // 여기에 10을 입력하시오: 10
+    // String + int를 했다고 해서 int가 String으로 바뀌지 않는다. 그저 문자열에 포함이 된다.
 
     // Char 덧샘
     char largeA = 'A';
@@ -90,7 +91,7 @@ public class D2Operators {
     System.out.println(big1 == small1);
     System.out.println(big1 == big2);
 
-    // 논리 연산자
+    // 논리 연산자 (! -> && -> ||)
     // 체온은 37 이하이면서 나이는 20 이상
     int temperature = 38;
     int age = 20;
@@ -139,6 +140,5 @@ public class D2Operators {
     String message = dust <= 80 ? "좋음" : "나쁨";
     // System.out.println("미세먼지 수치: %d, (%s)");여기서 문자열 바로 옆에 .format을 쓰면 됨
     System.out.println(String.format("미세먼지 수치: %d, (%s)", dust, message));
-
   }
 }
