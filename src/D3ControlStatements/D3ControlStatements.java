@@ -1,7 +1,9 @@
 //package D3ControlStatements;
 //
 //import java.util.Scanner;
-//
+
+// 중복된 변수가 있으니 쓸려면 고치자
+
 //public class D3ControlStatements {
 //  public static void main(String[] args) {
 //    Scanner scanner = new Scanner(System.in);
