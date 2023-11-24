@@ -1,12 +1,4 @@
-package DtMethods;
-
-//
-
-//
-
-//
-
-//
+package D4Methods;
 
 import java.util.Arrays;
 
@@ -35,7 +27,7 @@ public class H4Methods {
     if (time < 0 || time >= 128) {
       return -1;
     } else {
-      return (7 + time) - 12;
+      return (7 + time) % 12;
     }
   }
 
@@ -61,7 +53,8 @@ public class H4Methods {
         break;
     }
 
-    return result;
+    return result; // case 조건 외에 다른 값이 나올 수 있으므로 에러가 난다. so default를 쓰거나 여기서 return을 해줘야 한다.
+    // break를 씀으로서 switch를 깨뜨리는 형식으로 넣게 됨
   }
 
   //  H4
@@ -103,12 +96,15 @@ public class H4Methods {
 
   // 최댓값과 최솟갑의 차이를 반환
   public static int maxDiff(int[] nums) {
+    // 반복문 1번 사용
     int max = 0, min = 0;
     for (int i = 0; i < nums.length; i++) {
       if (nums[i] > max) max = nums[i];
       if (nums[i] < min) min = nums[i];
     }
     return max - min;
+    // 반복문 2번 사용 및 메소드 활용
+    // maxWhere과 minWhere를 사용한다.
   }
 
   //  H5
@@ -128,6 +124,20 @@ public class H4Methods {
     }
 
     return res;
+//    // way 2.
+//    int[] result = new int[arr1.length + arr2.length];
+//    int idx = 0;
+//    for (int i = 0; i < arr1.length; i++) {
+//      result[idx] = arr1[i];
+//      idx++;
+//    }
+//
+//    for (int i = 0; i < arr2.length; i++) {
+//      result[idx] = arr1[2];
+//      idx++;
+//    }
+//
+//    return result;
   }
 
   //  H6
@@ -143,6 +153,19 @@ public class H4Methods {
   //  하노이의 탑이라 부른다.
   //  한 탑에서 원반을 하나 꺼내 다른 탑으로 옮긴 횟수를 센다고 했을 때,
   //  n개의 원반을 총 몇번 옮겨야 하는지를 구하는 메서드를 작성하시오.
+
+  // 1개, f(1) = 1
+  // 2개, f(2) = f(1) + 1 + f(1) = 3 // 여기서 추가된 1은 새로 추가된 원판을 옮기는 횟수다.
+  // 3개, f(3) = f(2) + 1 + f(2) = 7
+  // 4개, f(4) = f(3) + 1 + f(3) = 15
+
+  public static int hanoi(int n) {
+    // n < 1 = -1
+    if (n < 1) return 0;
+    // f(1) == 1
+    if (n == 1) return 1;
+    else return hanoi(n-1) * 2 + 1;
+  }
 
   public static void main(String[] args) {
     // H1
@@ -166,5 +189,7 @@ public class H4Methods {
     int[] arr1 = {0, 1, 2}, arr2 = {3, 4, 5};
     System.out.print(Arrays.toString(sumArr(arr1, arr2)));
 
+    // H6
+    System.out.println(hanoi(5));
   }
 }

@@ -1,6 +1,4 @@
-package DtMethods;
-
-import java.util.Scanner;
+package D4Methods;
 
 /*
 피보나치 수열

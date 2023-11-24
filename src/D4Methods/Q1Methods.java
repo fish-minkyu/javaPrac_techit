@@ -1,4 +1,4 @@
-package DtMethods;
+package D4Methods;
 
 // Q1-1
 // 두 정수를 인자로 받아

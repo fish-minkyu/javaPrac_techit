@@ -1,4 +1,4 @@
-package DtMethods;
+package D4Methods;
 
 public class D4Methods {
   public static void main(String[] args) {
