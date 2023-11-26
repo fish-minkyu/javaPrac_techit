@@ -31,12 +31,17 @@ public class BankAccount {
   }
 
   // 전체 계좌 총 수
-  public int countAccount() {
+  public static int countAccount() {
     return count;
   }
 
   // 계좌잔액 확인
-  public int checkMoney() {
-    return bankMoney;
+  public static int getTotalBalance(BankAccount[] accounts) {
+    int totalBalance = 0;
+    for (BankAccount account : accounts) {
+      totalBalance += account.bankMoney;
+    }
+
+    return totalBalance;
   }
 }
