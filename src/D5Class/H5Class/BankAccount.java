@@ -12,6 +12,7 @@ public class BankAccount {
   private int bankMoney;
   private String password;
   private static int count = 0;
+  private static int totalBalance;
 
   // 예금 메서드
   public void deposit(int money) {
@@ -20,14 +21,13 @@ public class BankAccount {
 
   // 출금 메서드
   public boolean withdrawl(int money, String password) {
-    if (password != this.password) {
+    if (!this.password.equals(password) || this.bankMoney < money) {
       return false;
-    } else if (bankMoney - money < 0) {
-      return false;
-    } else {
-      bankMoney -= money;
-      return true;
     }
+
+    this.bankMoney -= money;
+    totalBalance -= money;
+    return true;
   }
 
   // 전체 계좌 총 수
@@ -36,12 +36,17 @@ public class BankAccount {
   }
 
   // 계좌잔액 확인
-  public static int getTotalBalance(BankAccount[] accounts) {
-    int totalBalance = 0;
-    for (BankAccount account : accounts) {
-      totalBalance += account.bankMoney;
-    }
-
+//  public static int getTotalBalance(BankAccount[] accounts) {
+//    int totalBalance = 0;
+//    for (BankAccount account : accounts) {
+//      totalBalance += account.bankMoney;
+//    }
+//
+//    return totalBalance;
+//  }
+  public static int totalBalance() {
     return totalBalance;
   }
+
+
 }
