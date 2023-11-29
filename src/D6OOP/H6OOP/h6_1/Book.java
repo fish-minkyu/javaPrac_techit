@@ -1,4 +1,4 @@
-package D6OOP.H6OOP.question1;
+package D6OOP.H6OOP.h6_1;
 
 public abstract class Book {
   private String title;

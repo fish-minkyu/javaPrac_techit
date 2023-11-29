@@ -1,4 +1,4 @@
-package D6OOP.H6OOP.question2;
+package D6OOP.H6OOP.h6_2;
 
 // 출금, 예금 기능을 해야 하므로 추상 클래스로 만드는 것은 맞지 않다.
 public class BankAccount {

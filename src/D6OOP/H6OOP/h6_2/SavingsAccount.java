@@ -1,4 +1,4 @@
-package D6OOP.H6OOP.question2;
+package D6OOP.H6OOP.h6_2;
 
 public class SavingsAccount  extends BankAccount {
 
@@ -20,7 +20,7 @@ public class SavingsAccount  extends BankAccount {
   @Override
   public void deposit(int amount) {
     if ( this.roundDepositAmount == amount) {
-      this.balance += amount;
+      super.deposit(amount);
       this.depositRounds++;
       System.out.println(String.format("%s 저축 완료", depositRounds));
     } else {
@@ -29,8 +29,11 @@ public class SavingsAccount  extends BankAccount {
   }
 
   @Override
-  public void withdraw(String password, int amount) {
-
+  public void withdraw(int amount, String password) {
+    if (maturityPeriod <= depositRounds) {
+      super.withdraw(amount, password);
+    } else {
+      System.out.println("만기 전에는 출금이 불가능합니다.");
+    }
   }
-
 }
