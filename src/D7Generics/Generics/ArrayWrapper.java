@@ -1,4 +1,4 @@
-package D7Generics;
+package D7Generics.Generics;
 
 import java.io.Serializable;
 

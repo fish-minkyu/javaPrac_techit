@@ -1,4 +1,4 @@
-package D7Generics;
+package D7Generics.Generics;
 
 /*
 정수 배열을 가지고 있고,

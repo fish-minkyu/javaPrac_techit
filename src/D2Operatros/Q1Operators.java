@@ -2,9 +2,9 @@ package D2Operatros;
 
 import java.util.Scanner;
 
+// Q. 세 과목의 시험접수(int)가 입력될 때, 평균 점수(double)를 구하여라
 public class Q1Operators {
   public static void main(String[] args) {
-    // Q. 세 과목의 시험접수(int)가 입력될 때, 평균 점수(double)를 구하여라
     Scanner scanner = new Scanner(System.in);
 
     int[] score = new int[3];

@@ -1,4 +1,4 @@
-package D7Generics;
+package D7Generics.optional;
 
 import java.util.*;
 

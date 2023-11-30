@@ -2,7 +2,7 @@ package D2Operatros;
 
 import java.util.Scanner;
 
-public class D2Operators {
+public class Main {
   public static void main(String[] args) {
     int plus = 10 + 20;
     int minus = 20 - 10;
@@ -16,8 +16,9 @@ public class D2Operators {
     System.out.println(divide); // 2.0
     System.out.println(modulo); // 5
 
+    // 사칙연산의 우선순위
     // %의 우선순위는?
-    int result = (10 + 5 % 3) / 3 + 2 * 3;
+    int result = (10 + 5 % 3) / 3 + 2 * 3; // 괄호가 최우선
     System.out.println(result); // 10
 
     System.out.println(21 / 10); // 2
@@ -45,7 +46,7 @@ public class D2Operators {
     // 더 큰 공간에서 작은 공간으로 옮기니 데이터 손실이 있을 수 있다.
     long bigInt = 4294967296L; // 2의 32승, 33칸의 비트가 필요하다.
     System.out.println((int) bigInt); // 0
-    // => 0인 이유는 int의 범위를 넘었기 때문에 그 이상인 데이터는 날라간다.
+    // => 0인 이유는 int의 범위를 넘었기 때문에 그 이상인 데이터들은 날라가서 0이 된다.
 
     // char 형 변환 (String은 안됨)
     int asciiA = 65;
@@ -65,10 +66,10 @@ public class D2Operators {
 
     // 증감 연산자
     int count = 10;
-    System.out.println(++count); // 전치 계산, (출력 전에 1 증가, 값 11)
-    System.out.println(count++); // 후치 계산, (출력 후에 1 증가, 값 12)
-    System.out.println(--count); // 전치 계산, (출력 전에 1 감소, 값 11)
-    System.out.println(count--); // 후치 계산, (출력 후에 1 감소, 값 10)
+    System.out.println(++count); // 전치 계산, 11(출력 전에 1 증가, 값 11)
+    System.out.println(count++); // 후치 계산, 11(출력 후에 1 증가, 값 12)
+    System.out.println(--count); // 전치 계산, 11(출력 전에 1 감소, 값 11)
+    System.out.println(count--); // 후치 계산, 11(출력 후에 1 감소, 값 10)
     // 대부분의 증감 연산자는 후위 연산자를 사용한다.
 
     // 복합 할당 연산자
@@ -92,6 +93,7 @@ public class D2Operators {
     System.out.println(big1 == big2);
 
     // 논리 연산자 (! -> && -> ||)
+    // : !이 먼저 계산되고 그 다음 && 마지막으로 ||이 계산된다.
     // 체온은 37 이하이면서 나이는 20 이상
     int temperature = 38;
     int age = 20;

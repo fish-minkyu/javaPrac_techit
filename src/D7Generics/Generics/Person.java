@@ -1,4 +1,4 @@
-package D7Generics;
+package D7Generics.Generics;
 
 public class Person implements Comparable<Person>{
 

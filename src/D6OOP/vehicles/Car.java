@@ -45,7 +45,4 @@ public class Car implements Beeper, Drivable { // interfaces는 구현을 통해
       "moved: %d, current fuel: %d",
       kilos, this.fuel));
   }
-
-
-
 }

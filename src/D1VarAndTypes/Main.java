@@ -3,7 +3,7 @@ package D1VarAndTypes;
 import java.util.Scanner;
 
 // 변수와 자료형
-public class D1VarAndTypes {
+public class Main {
   // main 치고 tab키
   public static void main(String[] args) {
     // <자료형> <이름> = <값>
@@ -130,10 +130,10 @@ public class D1VarAndTypes {
     System.out.println(doubleBack); // \is backslash
 
     // 그 외 엔터키(개행문자), 백스페이스, 탭키도 \를 쓴다.
-    // \n
+    // 엔터키(개행문자): \n
     System.out.println("개행문자: \n 다음은 다음 줄에 표현됩니다.");
 
-    // \t
+    // 탭키: \t
     System.out.println("name\tscore");
     System.out.println("Alex\t3.5");
     System.out.println("Thomas\t4.0");

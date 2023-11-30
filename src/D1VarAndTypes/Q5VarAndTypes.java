@@ -2,8 +2,6 @@ package D1VarAndTypes;
 
 import java.util.Scanner;
 
-public class Q5VarAndTypes {
-  public static void main(String[] args) {
     // Q5.
     /*
     사용자에게 3개의 0.0 ~ 4.5 사이의 실수를 입력받고
@@ -11,6 +9,8 @@ public class Q5VarAndTypes {
     이름 - <이름>, 학점 - <실수>
     의 형태로 3줄을 출력하는 프로그램을 작성하시오. 단, 실수의 범위가 틀려도 상관없다
     */
+public class Q5VarAndTypes {
+  public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
 
     double[] scores = new double[3];
