@@ -2,7 +2,7 @@ package D3ControlStatements;
 
 import java.util.Scanner;
 
-public class D3ControlStatements {
+public class Main {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     // 나이가 20 미만일 때, 입장 불가 출력
@@ -61,22 +61,6 @@ public class D3ControlStatements {
       System.out.println("매우 나쁨");
     }
 
-    /*어떤 학생의 시험점수가 정수로 주어진다.
-    점수가 90점 이상이면 "수",
-    점수가 80점 이상 90점 미만이면 "우",
-    점수가 80점 미만이면 "미"를 출력하여라.
-    */
-
-    int testScore = 90;
-
-    if (testScore >= 90) {
-      System.out.println("수");
-    } else if (testScore >= 80) {
-      System.out.println("우");
-    } else {
-      System.out.println("미");
-    }
-
     // if 조건문이 맞으면 다음 조건문은 확인도 하지 않는다.
     int zero = 0;
     if (zero == 0) {
@@ -108,13 +92,15 @@ public class D3ControlStatements {
       case "d":
         System.out.println("right");
         break;
-        // 기본 동작, if문의 else문과 똑같다. (필수값 아님)
+        // default: 기본 동작, if문의 else문과 똑같다. (필수값 아님)
       default:
         System.out.println("invalid");
+        break;
     }
 
     // enhanced switch
     // : 기능적으로 일반 switch문과 같다.
+    // ->가 생기고 break문을 생략할 수 있다.
     switch (input) {
       case "w" ->
         System.out.println("up");
@@ -186,7 +172,7 @@ public class D3ControlStatements {
     int toast = 5000;
     while (true) {
       wallet -= toast;
-      if (wallet <= 0) {
+      if (wallet <= 0) { // false가 될 조건을 우선 명시하면 가독성이 좋다.
         System.out.println("파산이어서 더 못먹음");
         // 그만 먹자
         break; // break는 가장 가까운 "반복문"을 멈춘다.

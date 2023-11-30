@@ -88,8 +88,7 @@ public class WrapperClass {
         System.out.println(String.format("letter: %c", letter));
       }
     }
-
-    // Wrapper class를 외우지 말고 찾아서 쓰는 것이 좋다.
-    // 개발자가 미리 만든 메서드의 이름을 고민해보면서 유추해보면 좋을 것 같다.
   }
 }
+// Wrapper class를 외우지 말고 찾아서 쓰는 것이 좋다.
+// 개발자가 미리 만든 메서드의 이름을 고민해보면서 유추해보면 좋을 것 같다.

@@ -2,32 +2,21 @@ package D3ControlStatements;
 
 import java.util.Scanner;
 
+/*
+정수 n과 n개의 정수가 한줄씩 순서대로 입력된다.
+n개의 정수의 총합, 평균을 출력하여라.
+ */
 public class Q3ControlStatements {
-  public static void main(String[] args) {
-    // Q3. 정수 n이 입력된 뒤, n개의 이름이 개행을 기준으로 입력이 된다고 가정할 때,
-    // n개의 이름을 입력된 순서의 반대로 출력하여라.
-
-    // 3
-    // Alex
-    // Brand
-    // Chad
-    Scanner scanner = new Scanner(System.in);
-
-    // 몇개의 이름을 넣을 것인지 설정
-    int integer = scanner.nextInt();
-    // 정수 입력 이후 개행 소모 용도
-    scanner.nextLine();
-
-    String[] names = new String[integer];
-    // n개의 이름 입력 받기
-    for (int i = 0; i < names.length; i++) {
-      names[i] = scanner.nextLine();
-    }
-    // 이 시점에서 모든 이름을 받은 상태이다.
-    for (int i = 0; i < names.length; i++) {
-      // 0 ~ n-1까지 n개이다.
-      // 제일 뒤에 있는 요소의 인덱스는 n-1이다.
-      System.out.println(names[integer -1 - i]);
-    }
-  }
+      public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int sum = 0;
+        // 몇개의 정수가 입력될지 n에 저장되어 있다.
+        // 즉 n번 반복해서 입력을 받으면 된다.
+        for (int i = 0; i < n; i++) {
+          sum += scanner.nextInt();
+        }
+        System.out.println(sum);
+        System.out.println((double) sum / n);
+      }
 }

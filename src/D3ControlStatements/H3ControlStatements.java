@@ -13,32 +13,35 @@ public class H3ControlStatements {
 //    else System.out.println("음수");
 
 
-//    H2 (미해결)
+//    H2 (해결)
 //    축구리그에서는 승점을, 승리시 3점 무승부시 1점, 패배시 0점을 획득한다.
 //    남은 경기와 현재 승점과 목표 승점이 주어졌을 때,
 //    남은 경기에서 목표 승점을 넘을 수 있으면 필요한 최소 승수를
 //    없으면 최고 승점을 출력하여라.
 
-//    int remaining = scanner.nextInt();
-//    int current = scanner.nextInt();
-//    int goal = scanner.nextInt();
-//
-//    // 넘을 수 있냐를 판단하기 위해 전부 이겼다고 가정
-//    int maxScore = current * remaining * 3;
-//
-//    // 목표 점수 넘었나?
-//    if (maxScore >= goal) {
-//      // 승 한번이 무승부로 바뀌면 최고점에서 몇점이 줄어들까요? 2점
-//      // 획득할 수 있는 승점이 깍여도 목표 승점에 도달할 수 있나?
-//      // 최고 점수 - 목표 점수 = 여유분 점수
-//      // 여유분 점수를 2로 나눈 몫만큼 덜 이겨도 나머지를 다 무승부로 끝내면 필요한 최소 승수
-//      int minWins = remaining - (maxScore - goal) / 2;
-//      // 필요승수가 음수가 될 경우 0으로 바꿔주는 삼항 연산자
-//      minWins = minWins < 0 ? 0 : minWins;
-//      System.out.println(String.format("최소 필요 승수: %d", minWins));
-//    } elae {
-//      System.out.println(String.format("최대 승점: %d", maxScore));
-//    }
+    // 남은 경기
+    int remaining = scanner.nextInt();
+    // 현재 승점
+    int current = scanner.nextInt();
+    // 목표 승점
+    int goal = scanner.nextInt();
+
+    // 넘을 수 있냐를 판단하기 위해 전부 이겼다고 가정
+    int maxScore = current * remaining * 3;
+
+    // 목표 점수 넘었나?
+    if (maxScore >= goal) {
+      // 승 한번이 무승부로 바뀌면 최고점에서 몇점이 줄어들까요? 2점
+      // 획득할 수 있는 승점이 깍여도 목표 승점에 도달할 수 있나?
+      // 최고 점수 - 목표 점수 = 여유분 점수
+      // 여유분 점수를 2로 나눈 몫만큼 덜 이겨도 나머지를 다 무승부로 끝내면 필요한 최소 승수
+      int minWins = remaining - (maxScore - goal) / 2;
+      // 필요승수가 음수가 될 경우 0으로 바꿔주는 삼항 연산자
+      minWins = minWins < 0 ? 0 : minWins;
+      System.out.println(String.format("최소 필요 승수: %d", minWins));
+    } else {
+      System.out.println(String.format("최대 승점: %d", maxScore));
+    }
 
 
 //    //  H3 (해결)
@@ -49,16 +52,16 @@ public class H3ControlStatements {
 //    //  센티미터는 해당 길이의 인치로, 인치는 해당 길이의 센티미터로 소수점 2째 자리까지 출력하여라.
 //    // 1cm = 0.393701in, 1in = 2.54cm
 //
-//    int unit = scanner.nextInt();
-//    int length = scanner.nextInt();
-//
-//    if ( unit == 0) {
-//      System.out.printf("%.2f", length * 0.393701);
-//    } else if ( unit == 1) {
-//      System.out.printf("%.2f", length * 2.54);
-//    } else {
-//      System.out.println("0 또는 1을 입력해주세요.");
-//    }
+    int unit = scanner.nextInt();
+    int length = scanner.nextInt();
+
+    if ( unit == 0) {
+      System.out.printf("%.2f", length * 0.393701);
+    } else if ( unit == 1) {
+      System.out.printf("%.2f", length * 2.54);
+    } else {
+      System.out.println("0 또는 1을 입력해주세요.");
+    }
 
 //    //  H4 (완료)
 //    //  3명의 사람들에 대한 정보가
@@ -71,43 +74,43 @@ public class H3ControlStatements {
 //    // 사람 연속 3번, 온도 연속 3번 값을 받는다.
 //    // foreach문 활용, temp가 38이 넘는 인덱스를 찾고 사람 배열에 대입한다.
 //
-//    String[] people = new String[3];
-//    double[] temperature = new double[3];
-//
-//    people[0] = scanner.nextLine();
-//    people[1] = scanner.nextLine();
-//    people[2] = scanner.nextLine();
-//
-//    temperature[0] = scanner.nextDouble();
-//    temperature[1] = scanner.nextDouble();
-//    temperature[2] = scanner.nextDouble();
-//
-//    for (int i = 0; i < 3; i++) {
-//      if (temperature[i] >= 38) {
-//        System.out.println(people[i]);
-//      }
-//    }
+    String[] people = new String[3];
+    double[] temperature = new double[3];
+
+    people[0] = scanner.nextLine();
+    people[1] = scanner.nextLine();
+    people[2] = scanner.nextLine();
+
+    temperature[0] = scanner.nextDouble();
+    temperature[1] = scanner.nextDouble();
+    temperature[2] = scanner.nextDouble();
+
+    for (int i = 0; i < 3; i++) {
+      if (temperature[i] >= 38) {
+        System.out.println(people[i]);
+      }
+    }
 
 //    //  H5 (완료)
 //    //  한 정수를 입력받는다.
 //    //  이후 이 정수를 거듭제곱하며 1의 자리를 확인하면서,
 //    //  몇번 거듭제곱 했을 때 다시 원래의 숫자의 1의 자리랑 일치하는지 출력하여라.
-//
-//    int n = scanner.nextInt();
-//    int multiple = n;
-//    int count = 0;
-//
-//    while (true) {
-//      multiple *= n;
-//
-//      if ( multiple % 10 == n % 10) {
-//        count++;
-//        System.out.println(count);
-//        break;
-//      }
-//
-//      count++;
-//    }
+
+    int n = scanner.nextInt();
+    int multiple = n;
+    int count = 0;
+
+    while (true) {
+      multiple *= n;
+
+      if ( multiple % 10 == n % 10) {
+        count++;
+        System.out.println(count);
+        break;
+      }
+
+      count++;
+    }
 
     //  H6
     //  1월 1일의 요일이 정수

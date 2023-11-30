@@ -33,6 +33,5 @@ public class Q1Methods {
   }
 
   public static void main(String[] args) {
-
   }
 }
