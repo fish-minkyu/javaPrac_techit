@@ -3,7 +3,7 @@ package D5Class;
 // Car Class: 자동차 설계도
 // 객체에 대한 정보 = 속성(property)
 // 기능 = 메서드
-public class Car {
+public class PrivateCar {
   // 브랜드
   private final String brand; // private: 클래스 내부에서만 접근 가능, 내부의 메서드들만 접근 가능
   // 차종
@@ -21,7 +21,7 @@ public class Car {
   // 생성자: 객체를 만들 때 호출되는 메서드
   // 생성자를 만들지 않으면 Java가 자동적으로 아무것도 받지 않는 기본 생성자를 만든다.
   // 접근제어자 클래스_이름()
-  public Car(String name, String brand, int fuel) {
+  public PrivateCar(String name, String brand, int fuel) {
     this.name = name;
     this.brand = brand;
     this.fuel = fuel;
@@ -29,7 +29,7 @@ public class Car {
   }
 
   // 생성자 메서드도 메서드 오버로딩이 가능하다.
-  public Car() {
+  public PrivateCar() {
     count++;
     this.name = "Sonata";
     this.brand = "Hyundai";

@@ -16,17 +16,16 @@ public class WrapperClass {
 
     // 3. 사칙연산도 그냥 참조 타입을 바탕으로 사용 가능하다.
     refInt += 10;
-    System.out.println(refInt);
+    System.out.println(refInt); // 20
     refInt /= primInt;
-    System.out.println(refInt);
-
+    System.out.println(refInt); // 2
+    // longValue(): Integer를 Long으로 바꿔준다.
     Long reflong = refInt.longValue();
 
     Character a = 'a';
 
     // 나름 유용한 기능들
     // 문자열 -> 정수를 변환
-    // parse: 컴퓨터가 데이터를 하나 하나 뜯어가면서 이해하는 과정
     Integer parsedInt = Integer.parseInt("1000");
     System.out.println(parsedInt = 100); // 1100
 
@@ -90,5 +89,6 @@ public class WrapperClass {
     }
   }
 }
+// parse: 컴퓨터가 데이터를 하나 하나 뜯어가면서 이해하는 과정
 // Wrapper class를 외우지 말고 찾아서 쓰는 것이 좋다.
 // 개발자가 미리 만든 메서드의 이름을 고민해보면서 유추해보면 좋을 것 같다.
