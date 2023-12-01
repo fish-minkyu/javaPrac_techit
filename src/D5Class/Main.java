@@ -2,7 +2,6 @@ package D5Class; // 패키지가 같으면 export, import를 안해줘도 된다
 
 public class Main {
 
-
   public static void main(String[] args) {
     // PublicCar class 객체를 만드는 행위, PublicCar 자료형 변수가 만들어진다.
     // PublicCar myCar, 어떤 클래스를 자료형으로 받을지 적어주는 것
